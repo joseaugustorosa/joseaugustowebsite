@@ -1,0 +1,402 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('./imagens/via-lactea-cheia-de-estrelas-no-espaco.jpg');
+    background-repeat: no-repeat;
+    background-size:  1500px;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+   
+
+.header h1, h3{
+    color: white;
+    text-align: center;
+
+}
+.header h1{
+    font-family: 'Nunito', sans-serif;
+ font-size: 50px;
+}
+.header h3{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px
+  
+}
+
+.header{
+    margin-top: 80px;
+}
+.card{
+    background-color: #ffffff10;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter:blur(10px) ;
+    width: 800px;
+    height: 450px;
+    margin: 100px auto;
+    border-radius: 15px;
+}
+.caixa{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: rgba(04, 03, 05, .5);
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin-top: 60px;
+    margin-left: 30px;
+}
+.caixa::before{
+    content: '';
+    inset: -10px 120px;
+    position: absolute;
+   
+    background: linear-gradient(315deg, #fbff00, #00e1ff);
+    transition: .5s;
+    animation: animar 4s linear infinite;
+}
+
+@keyframes animar {
+    0%{
+        transform: rotate(0deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+    
+}
+
+.caixa:hover::before{
+    inset: -20px 0px;
+}
+.caixa::after{
+    content: '';
+    position: absolute;
+    inset: 6px;
+    background: #6d6d6d;
+    border-radius: 50%;
+    z-index: 1;
+}
+.conteudo{
+    position: absolute;
+    inset: 30px;
+    border: 6px solid #040305 ;
+    z-index: 2;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:5px;
+}
+.conteudo img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+    pointer-events: none;
+  
+}
+
+.caixa:hover .conteudo img{
+    opacity: 0;
+}
+.conteudo h2{
+    font-family: 'Roboto Mono', monospace;
+   font-size: 1.0em;
+   text-align: center;
+   color: #fff;
+   font-weight: 600;
+   letter-spacing: .05em;
+   text-transform: uppercase; 
+   user-select: none;
+}
+.conteudo>span{
+    font-size: 2.5em;
+}
+
+.conteudo a{
+    margin-top: 5px;
+    background-color: #fff;
+    padding: 10px 20px;
+    color: #6b6b6b;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .05em;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: .5s;
+}
+.conteudo a:hover{
+    letter-spacing: .2em;
+}
+.info{
+    
+    padding-top: 50px;
+}
+.info h2{
+    text-align: center;
+    color: white;
+
+}
+.info p{
+    padding: 10px 50px;
+   padding-left: 370px;
+    color: white;
+}
+.tecnologias{
+    margin-top: 224px;
+    border-top: 2px solid rgb(71, 57, 194);
+    height: auto;
+    
+    width: 100%;
+    background-color:aliceblue;
+}
+
+.tecnologias ul li{
+    display: inline-block;
+    height: 150px;
+    margin: 50px;
+    width: 100px;
+    font-weight: bold;
+    
+}
+.tecnologias ul{
+    text-align: center;
+}
+.react{
+    background-image: url('https://gitlab.com/uploads/-/system/project/avatar/31182514/logo-react-icon.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0; /* ajuste esse valor de acordo com a altura da sua imagem */
+    
+}
+.html{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+}
+.css{
+    background-image: url('https://img.freepik.com/icones-gratis/css_318-698167.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+}
+.javascript{
+    background-image: url('https://jaki-jezyk-programowania.pl/img/technologies/javascript.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+}
+.vue{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1200px-Vue.js_Logo_2.svg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+}
+.python{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+
+}
+.kotlin{
+    background-image: url('https://repository-images.githubusercontent.com/389429650/7105a193-ad96-45cc-a3be-87cdfda75ebe');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+
+}
+
+.dart{
+    background-image: url('https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+
+}
+.sql{
+    background-image: url('https://e7.pngegg.com/pngimages/105/17/png-clipart-microsoft-azure-sql-database-microsoft-sql-server-cloud-computing-blue-text.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+}
+.firebase{
+   
+    background-image: url('https://cdn.iconscout.com/icon/free/png-256/free-firebase-1-282796.png?f=webp&w=256');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+}
+.vba{
+    background-image: url('https://cdn-icons-png.flaticon.com/512/732/732220.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 112px 0  0 0;
+}
+.titulo_tech{
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bolder;
+    font-size: 70px;
+    background: url("./imagens/via-lactea-cheia-de-estrelas-no-espaco.jpg");
+  background-size: 600px;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,.2);
+    
+}
+.contato{
+    background-image: url('./imagens/via-lactea-cheia-de-estrelas-no-espaco.jpg');
+    background-size: 1500px;
+    height: 500px;
+
+}
+.container_contato{
+    width: 600px;
+    height: 300px;
+    background-color: #ffffff10;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter:blur(10px) ;
+    margin: 100px auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.container_contato h1{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+ 
+
+}
+
+.container_contato p{
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+}
+.space{
+    height: 100px;
+    width: 100%;
+}
+.btncopiar{
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.37);
+    color: white;
+    padding: 3px;
+    border-radius: 10px;
+    transition: .5s;
+}
+.btncopiar:hover{
+    background-color: rgba(255, 255, 255, 0.445) ;
+}
+
+
+.container_contato ul{
+    margin-top: 25px;
+    text-align: center;
+
+
+}
+.container_contato li{
+   display: inline-block;
+   width: 100px;
+   height: 100px;
+   margin: 10px;
+
+
+}
+.linkedin{
+    background-image: url('https://cdn-icons-png.flaticon.com/512/174/174857.png');
+   background-repeat: no-repeat;
+   background-size: contain;
+   
+   font-size: 50px;
+   color:transparent ;
+  
+   
+ 
+}
+.github{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png');
+   background-repeat: no-repeat;
+   background-size: contain;
+   
+   font-size: 50px;
+   color:transparent ;
+  
+   
+   
+   
+ 
+}
+.whatsapp{
+    
+    background-image: url('https://www.cidademarketing.com.br/marketing/wp-content/uploads/2018/12/whatsapp-640x640.png');
+   background-repeat: no-repeat;
+   background-size: contain;
+   
+   font-size: 70px;
+   color:transparent ;
+  
+  
+}
+
+@media only screen and (max-width: 480px) {
+  
+
+
+    .header h1, h3{
+        color: white;
+        text-align: center;
+    
+    }
+    .header h1{
+        font-family: 'Nunito', sans-serif;
+     font-size: 50px;
+    }
+    .header h3{
+        font-family: 'Roboto Mono', monospace;
+        font-size: 20px
+      
+    }
+    
+    .header{
+        margin-top: 80px;
+    }
+    .card{
+        background-color: #ffffff10;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter:blur(10px) ;
+        width: 800px;
+        height: 450px;
+        margin: 100px auto;
+        border-radius: 15px;
+    }
+    .caixa{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: rgba(04, 03, 05, .5);
+        border-radius: 50%;
+        overflow: hidden;
+       
+        margin-top: 60px;
+        margin-left: 30px;
+    }
+
+
+  }
